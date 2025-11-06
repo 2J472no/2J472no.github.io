@@ -129,3 +129,10 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+
+.lb{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);z-index:9999}
+.lb.open{display:flex}
+.lb img{max-width:90vw;max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+
+img.zoomable{cursor: zoom-in;}

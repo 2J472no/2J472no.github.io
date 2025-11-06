@@ -72,7 +72,7 @@
           <tbody></tbody>
           <tr>
             <td style="padding:20px;width:30%;max-width:30%" align="center">
-              <img style="height: 50%; width:100%;" src="images/xNet.gif" alt="dise">
+              <img class="zoomable" style="width:100%;height:auto;" src="images/xNet.gif" alt="dise">
             </td>
             <td width="75%" valign="center">
               <papertitle>Is Pre-training Applicable to the Decoder for Dense Prediction?</papertitle>
@@ -92,9 +92,9 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody></tbody>
           <tr>
-            <td style="padding:20px;width:30%;max-width:30%" align="center">
-              <img style="height: 25%; width:100%;" src="images/LRDepth.gif" alt="dise">
-            </td>
+              <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <img class="zoomable" style="width:100%;height:auto;" src="images/LRDepth.gif" alt="dise">
+              </td>
             <td width="75%" valign="center">
               <papertitle>LR²Depth: Large-Region Aggregation at Low Resolution for Efficient Monocular Depth Estimation</papertitle>
               <br>
@@ -111,9 +111,9 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
           <tr>
-            <td style="padding:20px;width:30%;max-width:30%" align="center">
-              <img style="width:100%;max-width:100%" src="images/TrapAttention.png" alt="dise">
-            </td>
+              <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <img class="zoomable" style="width:100%;height:auto;" src="images/TrapAttention.png" alt="dise">
+              </td>
             <td width="75%" valign="center">
               <papertitle>Trap attention: Monocular depth estimation with manual traps</papertitle>
               <br>
@@ -128,9 +128,9 @@
           </tr>
 
             <tr>
-            <td style="padding:20px;width:30%;max-width:30%" align="center">
-              <img style="width:100%;max-width:100%" src="images/SS-ViT.png" alt="dise">
-            </td>
+              <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <img class="zoomable" style="width:100%;height:auto;" src="images/SS-ViT.png" alt="dise">
+              </td>
             <td width="75%" valign="center">
               <papertitle>SS ViT: Observing pathologies of multi-layer perceptron weights and re-setting vision transformer</papertitle>
               <br>
@@ -146,7 +146,7 @@
 
            <tr>
             <td style="padding:20px;width:30%;max-width:30%" align="center">
-              <img style="width:100%;max-width:100%" src="images/LP.png" alt="dise">
+            <img class="zoomable" style="width:100%;height:auto;" src="images/LP.png" alt="dise">
             </td>
             <td width="75%" valign="center">
               <papertitle>Learning-based padding: From connectivity on data borders to data padding</papertitle>
@@ -214,6 +214,31 @@
 	  <br>
 	    &copy; ChaoNing | Last updated: November 6, 2025
 </center></p>
+
+
+
+
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+  const lb = document.getElementById('lb');
+  const lbImg = lb.querySelector('img');
+
+  document.addEventListener('click', e => {
+    const img = e.target.closest('img.zoomable');
+    if (img) {
+      lbImg.src = img.dataset.full || img.src; // 有 data-full 就用原图
+      lb.classList.add('open');
+    } else if (e.target === lb) {
+      lb.classList.remove('open');
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') lb.classList.remove('open');
+  });
+</script>
 </body>
 
 </html>
