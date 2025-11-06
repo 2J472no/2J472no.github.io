@@ -156,7 +156,7 @@
               <br>
               <a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197623002324">[Paper]</a> <a href="https://github.com/ICSResearch/LP">[Code]</a>
               <br>
-              <p> Padding is employed vastly in convolutional neural networks (CNNs) to maintain the output size. In current padding schemes, the input feature maps are padded using quite simple strategies, e.g., constant zero values in zero padding, which is the most common padding choice. In this work, we propose to use learning-based paradigms to calculate the padding data from the connectivity of the input images on the data borders. Two different modules, i.e., learning-based padding by convolution (LPC) and learning-based padding by attention (LPA), are designed to obtain the padding data from the interdependencies of the image border data along the channel and spatial dimensions, respectively. The designed LPC or LPA is formulated as a generic, plug-and-play unit, which can be a direct replacement for the conventional padding technique. Extensive experiments on image classification and semantic segmentation tasks show that the proposed padding schemes can consistently obtain higher accuracy than standard padding schemes, in various deep network backbones. </p>
+              <p> We propose learning based padding that predicts border values from feature map context using lightweight convolution (LPC) and attention (LPA) modules, providing a generic plug and play replacement for zero padding that consistently improves accuracy on image classification and semantic segmentation across diverse backbones. </p>
             </td>
           </tr>
 
