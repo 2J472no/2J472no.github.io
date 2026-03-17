@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table class="page-container" style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="hero-card" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <p style="text-align:center">
@@ -30,12 +30,12 @@
               </p>
             </td>
             <td style="padding:2.5%;width:30%;max-width:30%">
-              <img style="width:80%;max-width:100%" alt="profile photo" src="images/profile.jpg">
+              <img class="profile-photo" style="width:80%;max-width:100%" alt="profile photo" src="images/profile.jpg">
             </td>
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="section-card" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
             <heading>Experiences</heading>
@@ -57,7 +57,7 @@
       </tbody></table>
 
       
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="section-title" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading> Selected Publications </heading>
@@ -68,9 +68,34 @@
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+        
+        <table class="pub-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody></tbody>
-          <tr>
+          <tr class="pub-card">
+            <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <img class="zoomable" style="width:100%;height:auto;" src="images/MD2E.png" alt="dise">
+            </td>
+            <td width="75%" valign="center">
+              <papertitle>MD2E: Modeling Depth-to-Edge Cues for Monocular Metric Depth Estimation</papertitle>
+              <br>
+              <strong>Chao Ning</strong>, Minghe Shen, Naoto Yokoya
+              <br>
+              CVPR, 2026
+              <br>
+              <br>
+              <!-- <a href="https://arxiv.org/abs/2503.07637">[Paper]</a> -->
+              <a href="https://2j472no.github.io/MD2E/">[Project]</a>
+              <br>
+              <p>
+                We study monocular metric depth estimation (MMDE) without camera intrinsics at training or inference. When focal length and scene depth vary together, depth changes are difficult to perceive from image, yet the edge-frequency statistics exhibit systematic, scale-correlated shifts. Building on this observation, we introduce a spectral quantile estimator (SQE) that analyzes the Fourier spectrum of a predicted edge map and outputs a single score used as a proxy for metric scale. Consequently, we propose MD2E, a method that models depth-to-edge cues by deriving edge targets from depth annotations, calibrating metric scale using the spectral score, and using edge predictions to regularize depth boundaries while producing metric depth. Across diverse cameras and datasets, MD2E achieves state-of-the-art monocular metric depth in both zero-shot and fine-tuning settings without camera metadata.
+              </p>
+            </td>
+          </tr>
+
+        <table class="pub-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody></tbody>
+          <tr class="pub-card">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img class="zoomable" style="width:100%;height:auto;" src="images/xNet.gif" alt="dise">
             </td>
@@ -90,9 +115,9 @@
           </tr>
 
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="pub-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody></tbody>
-          <tr>
+          <tr class="pub-card">
               <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img class="zoomable" style="width:100%;height:auto;" src="images/LRDepth.gif" alt="dise">
               </td>
@@ -110,8 +135,8 @@
           </tr>
 
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
-          <tr>
+        <table class="pub-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
+          <tr class="pub-card">
               <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img class="zoomable" style="width:100%;height:auto;" src="images/TrapAttention.png" alt="dise">
               </td>
@@ -128,7 +153,7 @@
             </td>
           </tr>
 
-            <tr>
+            <tr class="pub-card">
               <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img class="zoomable" style="width:100%;height:auto;" src="images/SS-ViT.png" alt="dise">
               </td>
@@ -145,7 +170,7 @@
             </td>
           </tr>
 
-           <tr>
+           <tr class="pub-card">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
             <img class="zoomable" style="width:100%;height:auto;" src="images/LP.png" alt="dise">
             </td>
@@ -166,7 +191,7 @@
         </table>
 
           
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="section-card" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Honors and Awards</heading>
@@ -213,7 +238,7 @@
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=L9EQlZkj5iCdWBMkJkgi98zY_ACS8WXMtmi-BflmwK8"></script>
 	  </div>        
 	  <br>
-	    &copy; ChaoNing | Last updated: November 6, 2025
+	    &copy; ChaoNing | Last updated: March 17, 2026
 </center></p>
 
 
