@@ -136,3 +136,137 @@ span.highlight {
 .lb img{max-width:90vw;max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.5)}
 
 img.zoomable{cursor: zoom-in;}
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1f2a44;
+  --muted: #5b6780;
+  --accent: #3867ff;
+  --accent-soft: #e9efff;
+  --border: #e6ebf5;
+  --shadow: 0 10px 30px rgba(22, 34, 66, 0.08);
+}
+
+body {
+  background: radial-gradient(circle at top, #eef3ff 0%, #f8faff 40%, #f5f7fb 100%);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.page-container {
+  background: transparent;
+  padding: 26px 18px 36px;
+}
+
+.hero-card,
+.section-card,
+.section-title,
+.pub-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  margin-bottom: 14px;
+}
+
+name {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #16203a;
+}
+
+heading {
+  color: #1a2a52;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+heading::after {
+  content: "";
+  display: block;
+  width: 62%;
+  height: 3px;
+  margin-top: 6px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+a {
+  color: var(--accent);
+  transition: color .2s ease;
+}
+
+a:focus,
+a:hover {
+  color: #f08a24;
+}
+
+.profile-photo {
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(38, 54, 102, 0.18);
+  border: 4px solid #fff;
+}
+
+.pub-card {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  border-radius: 14px;
+}
+
+.pub-card:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  box-shadow: 0 10px 24px rgba(36, 56, 109, 0.08);
+}
+
+papertitle {
+  font-size: 16px;
+  color: #15264d;
+}
+
+p,
+li,
+td {
+  color: var(--muted);
+}
+
+#clustrmaps-widget {
+  width: 70px !important;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 760px) {
+  .page-container {
+    padding: 12px 8px 24px;
+  }
+
+  name {
+    font-size: 32px;
+  }
+
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a,
+  strong,
+  papertitle {
+    font-size: 15px;
+  }
+
+  .hero-card,
+  .section-card,
+  .section-title,
+  .pub-list {
+    border-radius: 14px;
+  }
+}
